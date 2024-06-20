@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static\style.css" />
+    <title>Prediksi Pengklasifikasian Bunga Iris</title>
+  </head>
+  <body>
+    <h1>Prediksi Pengklasifikasian Bunga Iris</h1>
+    <center><h4>Haikal Fawwaz Karim - 5220411302</h4></center>
+    <form action="/predict" method="post">
+      <label for="sl">Sepal Length (cm):</label>
+      <input type="text" id="sl" name="sl" required /><br />
+      <label for="sw">Sepal Width (cm):</label>
+      <input type="text" id="sw" name="sw" required /><br />
+      <label for="pl">Petal Length (cm):</label>
+      <input type="text" id="pl" name="pl" required /><br />
+      <label for="pw">Petal Width (cm):</label>
+      <input type="text" id="pw" name="pw" required /><br />
+      <label for="model">Model Type:</label>
+      <select id="model" name="model" required>
+        <option value="numpy">Numpy</option>
+        <option value="pandas">Pandas</option></select
+      ><br /><br />
+      <input type="submit" value="Predict" />
+    </form>
+    {% if prediction %}
+    <h2>Prediksi Bunga: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
